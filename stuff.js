@@ -1,3 +1,46 @@
+let button = document.querySelector('.button');
+let inputValue = docuemt.querySelector('.inputValue');
+let name = document.querySelector('.name');
+let desc = document.querySelector('.desc');
+let temp = document.querySelector('.temp');
+
+button.addEventListener('click', function(){
+fetch(api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=b0908bc610503bb11e6553779731e54b)
+.then(response => response.json())
+.then(data => console.log(data))
+
+.catch(err => alert("Couldn't find city, try again."))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*let locationIcon = document.querySelector('.weather-icon');
 const {icon} = data.weather[0];
 
