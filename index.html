@@ -5,42 +5,38 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Weather App</title>
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="styles.css">
+        <title>Titty Travel</title>
+
+        <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
     <body>
-
-    <section class="top-banner">
-        <div class="container">
-            <h1 class="heading">Hi! Welcome to Weather App!</h1>
-                <form>
-                    <input type="text" placeholder="Search for a city">
-                    <button type="submit">SUBMIT</button>
-                    <span class="msg"></span>
-                </form>
+        <h1 class="text-center">Hello World</h1>
+        <div class="searchWindow">
+            <div class="searchBar">
+                <input type="text" placeholder="Search for a city...">
+            </div>
+            <button id="button" type="button">GO</button>
+            <form>
+                <input type="checkbox" id="travel-information1" name="travel-information1" value="Only-Weather">
+                <label for="travel-information1">Only Weather</label>
+                <br>
+                <input type="checkbox" id="travel-information1" name="travel-information1" value="Only-Attractions">
+                <label for="travel-information1">Only Attractions</label>
+                <br>
+                <input type="checkbox" id="travel-information1" name="travel-information1" value="Filter-Alphabetically">
+                <label for="travel-information1">Filter Alphabetically</label>
+                <br>
+            </form>
         </div>
-    </section>
-    
-    <section class="ajax-section">
-        <div class="container">
-            <ul class="cities"></ul>
-        </div>
-    </section>
 
-    <li class="city">
-        <h2 class="city-name" data-name="...">
-            <span>...</span>
-            <sup>...</sup>
-        </h2>
-        <span class="city-temp">...</sup>°C</sup></span>
-        <figure>
-            <div class="weather-icon"><img src="icons/unknown.png" /></div>
-            <img class="city-icon" src="..." alt="...">
-            <figcaption>...</figcaption>
-        </figure>
-    </li>
+
+
+
+
+
 
 
 
