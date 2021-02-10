@@ -1,12 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .body {
-    background-color: white;
+    background-color: teal;
+    font-family: "Nunito", sans-serif;
+}
+
+.inputvalue{
+    height: 50px;
 }
 
 .searchwindow{
+    display:-ms-grid;
     background-color: teal;
     position: fixed;
     width: 100%;
-    position: fixed;
 
 }
 
@@ -18,5 +29,33 @@
     position: fixed;
 }
 .display{
- 
+    text-align: center;
+}
+
+input[type="text"]{
+    padding:10px 10px;
+    height: 50px;
+    width: 500px;
+    background: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+input[type="submit"]{
+    padding:10px;
+    height: 50px;
+    width: 100px;
+    background: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+}
+
+.box1{
+    border: 2px solid red;
 }

@@ -14,42 +14,49 @@
     </head>
     <body class="body">
         <h1 class="header">Titty Travel</h1>
-        <div class="searchwindow">
-            <div class="input">
-                <input class="inputValue" style="height: 50px; width: 300px; color: black; left: 975px; position: relative; top: 32px;" type="text" placeholder="Search for a city...">
-            </div>
-            <input type="submit" style="width: 150px; height: 50px; position: relative; left: 1280px; top: -18px; color: black;" value="GO">
+
+<div class="input">
+    <input type="text" class="inputValue" placeholder="Type a city...">
+    <input type="submit" value="Submit" class="button" id="submit">
+</div>
+
+        <div class="check-row">
             <form>
-                <input style="position: relative; left: 1450px; top: -70px;" type="checkbox" id="travel-information1" name="travel-information1" value="Only-Weather">
-                <label style="position: relative; left: 1450px; top: -70px;" for="travel-information1">Only Weather</label>
+                <input style="position: relative; left: 1000px; top: -70px;" type="checkbox" id="weather-filter" name="weather-filter" value="Only-Weather">
+                <label style="position: relative; left: 1000px; top: -70px;" for="travel-information1">Only Weather</label>
                 <br>
-                <input style="position: relative; left: 1450px; top: -70px;" type="checkbox" id="travel-information1" name="travel-information1" value="Only-Attractions">
-                <label style="position: relative; left: 1450px; top: -70px;" for="travel-information1">Only Attractions</label>
+                <input style="position: relative; left: 1000px; top: -70px;" type="checkbox" id="attractions-filter" name="attractions-filter" value="Only-Attractions">
+                <label style="position: relative; left: 1000px; top: -70px;" for="travel-information1">Only Attractions</label>
                 <br>
-                <input style="position: relative; left: 1450px; top: -70px;" type="checkbox" id="travel-information1" name="travel-information1" value="Filter-Alphabetically">
-                <label style="position: relative; left: 1450px; top: -70px;" for="travel-information1">Filter Alphabetically</label>
+                <input style="position: relative; left: 1000px; top: -70px;" type="checkbox" id="alphabetical-filter" name="alphabetical-filter" value="Filter-Alphabetically">
+                <label style="position: relative; left: 1000px; top: -70px;" for="travel-information1">Filter Alphabetically</label>
                 <br>
             </form>
         </div>
 
 <div class="display">
-    <div class="box1, col-sm-4" style="position: fixed; bottom: 30%; left: 20%;">
-        <p>1</p>
+    <div class="box1" style="position: fixed;  bottom: 30%; left: 20%;">
+        <h1 class="name">fuck</h1>
+        <p class="desc">fuck</p>
+        <p class="temp">1</p>
         </div>
-    <div class="box2, col-sm-4" style="position: fixed;  bottom: 30%; left: 40%;">
-        <p>2</p>
+    <div class="box2" style="position: fixed;  bottom: 30%; left: 40%;">
+        <h1 class="name">fuck</h1>
+        <p class="desc">fuck</p>
+        <p class="temp">2</p>
     </div>
-    <div class="box3, col-sm-4" style="position: fixed;  bottom: 30%; left: 60%;">
-        <p>3</p>
+    <div class="box3" style="position: fixed;  bottom: 30%; left: 60%;">
+        <h1 class="name">fuck</h1>
+        <p class="desc">fuck</p>
+        <p class="temp">3</p>
     </div>
-    <div class="box4, col-sm-4" style="position: fixed;  bottom: 30%; left: 80%;">
-        <p>4</p>
+    <div class="box4" style="position: fixed;  bottom: 30%; left: 80%;">
+        <h1 class="name">fuck</h1>
+        <p class="desc">fuck</p>
+        <p class="temp">4</p>
     </div>
 </div>
-
-        <!-- Bootstrap JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
+</body>
 
     <div class="footer">
         <p>
@@ -60,5 +67,10 @@
         </p>
     </div>
 
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="stuff.js"></script> <!--Här plockar vi in vår JS.-->
 </html>
