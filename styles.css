@@ -1,0 +1,17 @@
+.body {
+    background-color: rgb(89, 113, 124);
+}
+.searchBar{
+    height: 50px; 
+    width: 300px; 
+    color: black
+}
+.button{
+    left: 1450px; 
+    top: -70px;
+    bottom: 0px;
+}
+.footer{
+    bottom: 0;
+    right: 0px;
+}

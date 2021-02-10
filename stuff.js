@@ -1,4 +1,4 @@
-let locationIcon = document.querySelector('.weather-icon');
+/*let locationIcon = document.querySelector('.weather-icon');
 const {icon} = data.weather[0];
 
 const form = document.querySelector(".top-banner form");
@@ -45,4 +45,4 @@ list.appendChild(li);
 
 msg.textContent = "";
 form.reset();
-input.focus();
+input.focus();*/
