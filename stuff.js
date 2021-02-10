@@ -1,19 +1,30 @@
-let button = document.querySelector('.button')
-let inputValue = document.querySelectorAll('.inputValue')
-let name = document.querySelector('.name');
-let desc = document.querySelector('.desc');
-let temp = document.querySelector('.temp');
+var button = document.querySelector('.button');
+//const input = document.querySelector('.searchbox');
+var main = document.querySelector('#name');
+var name = document.querySelector('.name');
+var desc = document.querySelector('.desc');
+var temp = document.querySelector('.temp');
 
-//const inputValue = 'London';
+const input = "Marbella";
 const apiKey = "130c1f0ea968fc82e4f1a6eb80ca25e3";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
 
 
 
 button.addEventListener('click',function(){
     fetch(url)
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+    
+    var nameValue = data['name'];
+    var tempValue = data['main']['temp'];
+    var descValue = data['weather'][0]['description'];
+
+main.innerHTML = nameValue;
+temp.innerHTML = "Temp: "+tempValue+" C";
+desc.innerHTML = "Desc: "+descValue;
+
+})
 
 .catch(err => alert("An error occurred."))
 })
