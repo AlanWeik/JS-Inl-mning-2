@@ -1,17 +1,44 @@
 .body {
-    background-color: rgb(89, 113, 124);
+    background-color: white;
 }
-.searchBar{
-    height: 50px; 
-    width: 300px; 
-    color: black
+
+.searchwindow{
+    background-color: teal;
+    position: fixed;
+    width: 100%;
+    position: fixed;
+
 }
+
+.searchbar{
+    
+}
+
 .button{
-    left: 1450px; 
-    top: -70px;
-    bottom: 0px;
+
 }
+
 .footer{
     bottom: 0;
-    right: 0px;
+    width: 100%;
+    background-color:white;
+    text-align: center;
+    position: fixed;
 }
+
+.box1{
+    background: chartreuse;
+}
+
+.box2{
+
+}
+
+.box3{
+
+}
+
+.box4{
+
+}
+
