@@ -4,10 +4,7 @@ var name = document.querySelector(".name");
 var desc = document.querySelector(".desc");
 var temp = document.querySelector(".temp");
 
-document.querySelector(".searchbox").value = "London";
-let input = document.querySelector(".searchbox").value;
-const apiKey = "130c1f0ea968fc82e4f1a6eb80ca25e3";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
+//document.querySelector(".searchbox").value = "London";
 
 function printValue() {
   const input = document.getElementById("searchbox").value;
@@ -15,6 +12,10 @@ function printValue() {
 }
 
 button.addEventListener("click", function () {
+  document.querySelector(".searchbox").value = "London";
+  const input = document.querySelector(".searchbox").value;
+  const apiKey = "130c1f0ea968fc82e4f1a6eb80ca25e3";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
   printValue();
   fetch(url)
     .then((response) => response.json())
