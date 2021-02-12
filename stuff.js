@@ -1,19 +1,24 @@
 var button = document.querySelector(".button");
-//let input = document.querySelector("#searchbox");
+//const input = document.querySelector("#searchbox");
 var main = document.querySelector("#name");
 var name = document.querySelector(".name");
 var desc = document.querySelector(".desc");
 var temp = document.querySelector(".temp");
 
-//const input = "London";
+//let input = "London";
 const apiKey = "130c1f0ea968fc82e4f1a6eb80ca25e3";
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
 
+function search() {
+  const input = document.getElementById("searchbox").value;
+  alert("Value inside is: " + input);
+}
+
 button.addEventListener("click", function () {
+  search();
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      let input = document.querySelector("#searchbox");
       var nameValue = data["name"];
       var tempValue = data["main"]["temp"];
       var descValue = data["weather"][0]["description"];
