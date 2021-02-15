@@ -1,4 +1,7 @@
-const createVenueHTML = (name, location) => {
+// Här skriver vi ut vår data i våra färdiga mallar så att vi  
+
+const createVenueHTML = (name, location) => 
+{
   return `<h2>${name}</h2>
     <h3>Address:</h3>
     <p>${location.address}</p>
@@ -6,7 +9,8 @@ const createVenueHTML = (name, location) => {
     <p>${location.country}</p>`;
 };
 
-const createWeatherHTML = (currentDay) => {
+const createWeatherHTML = (currentDay) => 
+{
   console.log(currentDay)
   return `<h2>${weekDays[(new Date()).getDay()]}</h2>
           <h2>Temperature: ${currentDay.main.temp}&deg;C</h2>
