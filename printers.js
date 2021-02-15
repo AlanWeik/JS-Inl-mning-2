@@ -1,4 +1,4 @@
-// Här skriver vi ut vår data i våra färdiga mallar så att vi  
+// Här skriver vi ut vår hämtade data i våra färdiga mallar. 
 
 const createVenueHTML = (name, location) => 
 {
