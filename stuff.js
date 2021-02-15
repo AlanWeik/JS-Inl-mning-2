@@ -88,7 +88,7 @@ const renderVenues = (venues) =>
 
 const renderForeCast = (day) => 
 {
-  let weatherContent = creatWeatherHTML(day);
+  let weatherContent = createWeatherHTML(day);
   $weatherDiv.append(weatherContent);
 }
 
