@@ -4,7 +4,7 @@ const clientSecret = "PCK5DQLXAJ1H4LZKRF5T3M2ERT2LK3IXW2FRYTXMYPDZ53ZY";
 const url = "https://api.foursquare.com/v2/venues/explore?near=";
 
 // Openweather
-const openWeatherKey = "130c1f0ea968fc82e4f1a6eb80ca25e3";
+const openWeatherKey = "130c1f0ea968fc82e4f1a6eb80ca25e3"
 const weatherUrl = "https://api.openweathermap.org/data/2.5/weather";
 
 // Elements
@@ -25,7 +25,8 @@ const weekDays = [
 ];
 
 // Our FourSquare city-info fetcher.
-const getVenues = async () => {
+const getVenues = async () => 
+{
   const city = $input.val();
   const urlToFetch =
     url +
@@ -34,57 +35,66 @@ const getVenues = async () => {
     clientId +
     "&client_secret=" +
     clientSecret +
-    "&v=20180401";
-  try {
-    const response = await fetch(urlToFetch);
-    if (response.ok) {
-      const jsonResponse = await response.json();
-      const venues = jsonResponse.response.groups[0].items.map(
-        (item) => item.venue
-      );
-      console.log(venues);
-      return venues;
-    }
-  } catch (err) {
-    console.log(error);
-  }
-};
-
-// Our weather-fetcher.
-const getForeCast = async () => {
-  const urlToFetch = `${weatherUrl}?&q=${$input.val()}&APPID=${openWeatherKey}`;
-
-  try {
+    "&v=20210215";
+  try 
+  {
     const response = await fetch(urlToFetch);
     if (response.ok) {
       console.log(response);
       const jsonResponse = await response.json();
       console.log(jsonResponse);
+      const venues = jsonResponse.response.groups[0].items.map(item => item.venue);
+      console.log(venues);
+      return venues;
+    }
+  } catch (err) 
+  {
+    console.log(error);
+  }
+};
+
+// Our weather-fetcher.
+const getForeCast = async () => 
+{
+  const urlToFetch = `${weatherUrl}?&q=${$input.val()}&APPID=${openWeatherKey}`;
+
+  try {
+    const response = await fetch(urlToFetch);
+    if (response.ok) 
+    {
+      console.log(response);
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
       return jsonResponse;
     }
-  } catch (error) {
+  } catch (error) 
+  {
     print("There was an error.");
     console.log(error);
   }
 };
 
-const renderVenues = (venues) => {
-  $venueDivs.forEach(($venue, index) => {
+const renderVenues = (venues) => 
+{
+  $venueDivs.forEach(($venue, index) => 
+  {
     const venue = venues[index];
 
     let venueContent = createVenueHTML(venue.name, venue.location);
-    $venue.append(`<h2>${venues[0].location.city}</h2>`);
+    $venue.append(venueContent);
   });
+  $destination.append(`<h2>${venues[0].location.city}</h2>`);
 };
 
-const renderForeCast = (day) => {
+const renderForeCast = (day) => 
+{
   let weatherContent = creatWeatherHTML(day);
   $weatherDiv.append(weatherContent);
-};
+}
 
 // Makes our search possible.
 const executeSearch = () => {
-  $venueDivs.forEach((venue) => venue.empty());
+  $venueDivs.forEach(venue => venue.empty());
   $weatherDiv.empty();
   $destination.empty();
   $container.css("visibility", "visible");
